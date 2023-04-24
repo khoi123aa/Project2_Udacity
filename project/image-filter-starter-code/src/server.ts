@@ -30,7 +30,7 @@ import { filterImageFromURL, deleteLocalFiles } from './util/util';
   /**************************************************************************** */
 
   //! END @TODO1Z
-  app.get("/filteredimage", async (requests, response) => {
+  app.get("/filteredimage", async (requests:express.Request, response:express.Response) => {
     try {
       let image_URL = requests.query.image_url.toString();
       const fileName = await filterImageFromURL(image_URL);
